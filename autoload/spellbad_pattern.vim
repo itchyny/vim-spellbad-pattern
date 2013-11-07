@@ -1,0 +1,30 @@
+" =============================================================================
+" Filename: autoload/spellbad_pattern.vim
+" Author: itchyny
+" License: MIT License
+" Last Change: 2013/11/07 14:20:19.
+" =============================================================================
+
+let s:save_cpo = &cpo
+set cpo&vim
+
+function! spellbad_pattern#update()
+  if !exists('b:spellbad_pattern_done') || b:spellbad_pattern_done != &l:spell
+    if &l:spell
+      let spellbads = get(g:, 'spellbad_pattern', [])
+      let b:spellbad_pattern_id = []
+      for s in spellbads
+        call add(b:spellbad_pattern_id, matchadd('SpellBad', s))
+      endfor
+    elseif exists('b:spellbad_pattern_id')
+      for i in b:spellbad_pattern_id
+        call matchdelete(i)
+      endfor
+      unlet b:spellbad_pattern_id
+    endif
+    let b:spellbad_pattern_done = &l:spell
+  endif
+endfunction
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
