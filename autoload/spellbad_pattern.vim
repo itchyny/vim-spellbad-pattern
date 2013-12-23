@@ -2,7 +2,7 @@
 " Filename: autoload/spellbad_pattern.vim
 " Author: itchyny
 " License: MIT License
-" Last Change: 2013/11/07 14:20:19.
+" Last Change: 2013/12/23 20:26:09.
 " =============================================================================
 
 let s:save_cpo = &cpo
@@ -18,7 +18,7 @@ function! spellbad_pattern#update()
       endfor
     elseif exists('b:spellbad_pattern_id')
       for i in b:spellbad_pattern_id
-        call matchdelete(i)
+        silent! call matchdelete(i)
       endfor
       unlet b:spellbad_pattern_id
     endif
