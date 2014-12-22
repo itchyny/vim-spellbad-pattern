@@ -2,13 +2,13 @@
 " Filename: autoload/spellbad_pattern.vim
 " Author: itchyny
 " License: MIT License
-" Last Change: 2014/05/29 20:15:12.
+" Last Change: 2014/12/17 00:20:08.
 " =============================================================================
 
 let s:save_cpo = &cpo
 set cpo&vim
 
-function! spellbad_pattern#update()
+function! spellbad_pattern#update() abort
   if exists('b:spellbad_pattern_done') && b:spellbad_pattern_done == &l:spell
     return
   endif
