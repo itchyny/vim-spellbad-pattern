@@ -1,0 +1,43 @@
+*spellbad_pattern.txt*	Register regex patterns to spellbad
+
+Version: 0.1
+Author: itchyny (https://github.com/itchyny)
+License: MIT License
+Repository: https://github.com/itchyny/vim-spellbad-pattern
+Last Change: 2015/01/27 19:31:07.
+
+CONTENTS					*spellbad-pattern-contents*
+
+Introduction				|spellbad-pattern-introduction|
+Options					|spellbad-pattern-options|
+Changelog				|spellbad-pattern-changelog|
+
+==============================================================================
+INTRODUCTION					*spellbad-pattern-introduction*
+This *spellbad-pattern* ( *vim-spellbad-pattern* *spellbad-pattern.vim* ) plugin
+enables you to register regular expressions to |SpellBad|. See |spell| for the
+help of the spell feature of Vim.
+
+------------------------------------------------------------------------------
+OPTIONS						*spellbad-pattern-options*
+
+g:spellbad_pattern_enable				*g:spellbad_pattern_enable*
+	When you set this variable to 0, you cannot edit the quickfix list.
+	The default value is 1.
+
+==============================================================================
+CHANGELOG					*spellbad-pattern-changelog*
+
+0.1	2013-11-07, 2014-06-21, 2014-12-22, 2015-01-27
+	- Check g:loaded_spellbad_pattern
+	- Quick return
+	- Use abort for :function
+	- Check g:spellbad_pattern_enable
+	- Check exists('*matchadd')
+	- Rewrite code
+
+0.0	2013-11-07
+	- Initial commit
+
+==============================================================================
+vim:tw=78:sw=4:ts=8:ft=help:norl:noet:
