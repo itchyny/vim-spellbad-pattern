@@ -2,10 +2,10 @@
 " Filename: plugin/spellbad_pattern.vim
 " Author: itchyny
 " License: MIT License
-" Last Change: 2014/12/14 14:25:57.
+" Last Change: 2015/01/18 09:44:33.
 " =============================================================================
 
-if exists('g:loaded_spellbad_pattern') || v:version < 700
+if exists('g:loaded_spellbad_pattern') || v:version < 700 || !exists('*matchadd')
   finish
 endif
 let g:loaded_spellbad_pattern = 1
