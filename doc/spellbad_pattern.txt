@@ -4,7 +4,7 @@ Version: 0.1
 Author: itchyny (https://github.com/itchyny)
 License: MIT License
 Repository: https://github.com/itchyny/vim-spellbad-pattern
-Last Change: 2015/08/23 08:16:21.
+Last Change: 2015/08/22 09:18:14.
 
 CONTENTS					*spellbad-pattern-contents*
 
@@ -28,8 +28,8 @@ b:spellbad_pattern_enable				*b:spellbad_pattern_enable*
 	The default value is 1.
 
 g:spellbad_pattern					*g:spellbad_pattern*
-	The array of strings (regexps) which you register the patterns to
-	highlight as badly spelled.
+	The array of strings (regexps) which you register the patterns to be
+	highlighted as badly spelled.
 	The default value is [].
 
 ==============================================================================
