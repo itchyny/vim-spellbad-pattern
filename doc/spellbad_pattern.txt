@@ -4,7 +4,7 @@ Version: 0.1
 Author: itchyny (https://github.com/itchyny)
 License: MIT License
 Repository: https://github.com/itchyny/vim-spellbad-pattern
-Last Change: 2015/01/27 19:31:07.
+Last Change: 2015/08/23 08:16:21.
 
 CONTENTS					*spellbad-pattern-contents*
 
@@ -22,19 +22,27 @@ help of the spell feature of Vim.
 OPTIONS						*spellbad-pattern-options*
 
 g:spellbad_pattern_enable				*g:spellbad_pattern_enable*
-	When you set this variable to 0, you cannot edit the quickfix list.
+b:spellbad_pattern_enable				*b:spellbad_pattern_enable*
+	When you set this variable to 0, the feature of this plugin is
+	disabled.
 	The default value is 1.
+
+g:spellbad_pattern					*g:spellbad_pattern*
+	The array of strings (regexps) which you register the patterns to
+	highlight as badly spelled.
+	The default value is [].
 
 ==============================================================================
 CHANGELOG					*spellbad-pattern-changelog*
 
-0.1	2013-11-07, 2014-06-21, 2014-12-22, 2015-01-27
+0.1	2013-11-07, 2014-06-21, 2014-12-22, 2015-01-27, 08-23
 	- Check g:loaded_spellbad_pattern
 	- Quick return
 	- Use abort for :function
 	- Check g:spellbad_pattern_enable
 	- Check exists('*matchadd')
 	- Rewrite code
+	- Fix the help
 
 0.0	2013-11-07
 	- Initial commit
